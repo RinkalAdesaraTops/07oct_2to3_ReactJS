@@ -4,15 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Userefexample from './Userefexample'
 import Usecontextexample from './Usecontextexample'
+import CRUDExample from './CRUDExample'
 
 function App() {
   let name="Abcd"
   return (
     <>
       <div>
-          <h3>Hooks Example</h3>
+          {/* <h3>Hooks Example</h3>
           <Userefexample />
-          <Usecontextexample name={name}/>
+          <Usecontextexample name={name}/> */}
+          <CRUDExample/>
+          
       </div>
     </>
   )
