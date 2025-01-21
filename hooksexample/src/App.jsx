@@ -5,6 +5,7 @@ import './App.css'
 import Userefexample from './Userefexample'
 import Usecontextexample from './Usecontextexample'
 import CRUDExample from './CRUDExample'
+import Apiexample from './Apiexample'
 
 function App() {
   let name="Abcd"
@@ -14,7 +15,8 @@ function App() {
           {/* <h3>Hooks Example</h3>
           <Userefexample />
           <Usecontextexample name={name}/> */}
-          <CRUDExample/>
+          {/* <CRUDExample/> */}
+          <Apiexample />
           
       </div>
     </>

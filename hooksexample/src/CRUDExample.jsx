@@ -6,7 +6,6 @@ const CRUDExample = () => {
     //save
     //onchange
     //display - table
-
     const [name, setName] = useState('')
     const [age, setAge] = useState('')
     const [data,setData] = useState([])
