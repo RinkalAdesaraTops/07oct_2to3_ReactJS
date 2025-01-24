@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import useApi from './useApi'
+import useFetch from './useFetch'
 const Apiexample = () => {
     const [data,setData] = useState({
         name:"",
         age:""
     })
-    const [id,setId]=useState('')
-    const [alldata,setAllData] = useState([])
+    const [id,setId]  = useState('')
+    const [allData] = useFetch('http://localhost:3000/users')
+
+    // const [alldata,setAllData] = useState([])
     const handleChange = (e)=>{
         const {name,value}=e.target
         setData({
@@ -33,8 +37,10 @@ const Apiexample = () => {
             })
     }
     const disp = ()=>{
-        axios.get('http://localhost:3000/users')
-        .then((msg)=>setAllData(msg.data))
+        setData(data)
+        // axios.get('http://localhost:3000/users')
+        // .then((msg)=>setAllData(msg.data))
+     
     }
     useEffect(()=>{
         disp()
@@ -66,11 +72,12 @@ const Apiexample = () => {
                 <th>Id</th>
                 <th>Name</th>
                 <th>Age</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             {
-                alldata.map((i,index)=>{
+                allData.map((i,index)=>{
                     return(
                         <tr>
                         <td>{i.id}</td>
